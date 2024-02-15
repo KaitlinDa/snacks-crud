@@ -1,7 +1,7 @@
-# Lab 27 - Class 401d24
+# Lab 28 - Class 401d24
 
 ## Project
-Snacks Model
+Snacks Crud
 
 ## Author
 
