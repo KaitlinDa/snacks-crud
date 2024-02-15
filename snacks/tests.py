@@ -11,7 +11,7 @@ class SnacksTests(TestCase):
         test_user.save()
 
         test_snack = Snack.objects.create(
-            name='Test Snack',
+            title='Test Snack',  
             purchaser=test_user,
             description='A test snack.'
         )
@@ -47,7 +47,7 @@ class SnacksTests(TestCase):
         self.assertTemplateUsed(response, 'base.html')
 
     def test_snack_detail_view(self):
-        test_snack_id = Snack.objects.get(name='Test Snack').id
+        test_snack_id = Snack.objects.get(title='Test Snack').id
         url = reverse('snack_detail', args=[test_snack_id])
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
